@@ -173,7 +173,7 @@ r0 = RouteProblem('T.nagar', 'Alwarpet', map=Mapping_locations)
 r1 = RouteProblem('Saidapet', 'Vadapalani', map=Mapping_locations)
 r2 = RouteProblem('Velachery', 'Guindy', map=Mapping_locations)
 r3 = RouteProblem('Vadapalani', 'Valasarvakkam', map=Mapping_locations)
-r4 = RouteProblem('Kolzpakkam', 'MGR Nagar', map=Mapping_locations)
+r4 = RouteProblem('Kolpakkam', 'MGR Nagar', map=Mapping_locations)
 
 goal_state_path=breadth_first_search(r1)
 path_states(goal_state_path) 

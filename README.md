@@ -169,21 +169,50 @@ Mapping_locations = Map(
     ('Valasaravakkam', 'Vadapalani'): 5,('Valasaravakkam', 'Mugalivakkam'): 3,('Mugalivakkam', 'Kolapakkam'): 2,('Kolapakkam', 'Airport'): 8,('Airport', 'Ramapuram'): 9,('Ramapuram', 'Nandambakkam'): 18,('Nandambakkam', 'MGR Nagar'): 20,('Ramapuram', 'Guindy'): 8,('Guindy', 'Little Mount'): 2,
     ('Little Mount', 'Saidapet'): 3,('Guindy', 'Indian Institute of Technology'): 8,('Indian Institute of Technology', 'Velachery'): 9,('T.Nagar', 'Alwarpet'): 3, ('T.Nagar', 'MGR Nagar'): 6})
     
-r0 = RouteProblem('T.nagar', 'Alwarpet', map=Mapping_locations)
+r0 = RouteProblem('Vadapalani', 'T.Nagar', map=Mapping_locations)
 r1 = RouteProblem('Saidapet', 'Vadapalani', map=Mapping_locations)
 r2 = RouteProblem('Velachery', 'Guindy', map=Mapping_locations)
-r3 = RouteProblem('Vadapalani', 'Valasarvakkam', map=Mapping_locations)
-r4 = RouteProblem('Kolpakkam', 'MGR Nagar', map=Mapping_locations)
+r3 = RouteProblem('Marina', 'MRC Nagar', map=Mapping_locations)
+r4 = RouteProblem('Ramapuram', 'MGR Nagar', map=Mapping_locations)
+print(r0)
+print(r1)
+print(r2)
+print(r3)
+print(r4)
+
+goal_state_path=breadth_first_search(r0)
+path_states(goal_state_path) 
+print("GoalStateWithPath:{0}".format(goal_state_path))
+print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
 
 goal_state_path=breadth_first_search(r1)
 path_states(goal_state_path) 
 print("GoalStateWithPath:{0}".format(goal_state_path))
 print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
- ```
+
+goal_state_path=breadth_first_search(r2)
+path_states(goal_state_path) 
+print("GoalStateWithPath:{0}".format(goal_state_path))
+print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
+
+goal_state_path=breadth_first_search(r3)
+path_states(goal_state_path) 
+print("GoalStateWithPath:{0}".format(goal_state_path))
+print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
+
+goal_state_path=breadth_first_search(r4)
+path_states(goal_state_path) 
+print("GoalStateWithPath:{0}".format(goal_state_path))
+print("Total Distance={0} Kilometers".format(goal_state_path.path_cost))
+```
 
 ## OUTPUT:
-
-![EX 2 Output](https://user-images.githubusercontent.com/75234965/166457487-8c43384f-d256-4186-8638-764f17ebcb14.PNG)
+![EXPT 2 1](https://user-images.githubusercontent.com/75234965/167299208-add8926e-6227-4c84-896c-deb14ddd50df.PNG)
+![EXPT 2 2](https://user-images.githubusercontent.com/75234965/167299221-d0cc10d2-88d9-4aa2-81c6-994af5ca1639.PNG)
+![EXPT 2 3](https://user-images.githubusercontent.com/75234965/167299226-fdfd4dea-aea2-4994-803b-65d367940460.PNG)
+![EXPT 2 4](https://user-images.githubusercontent.com/75234965/167299231-f31b7291-5ef1-4b54-b27e-df8a611df77d.PNG)
+![EXPT 2 5](https://user-images.githubusercontent.com/75234965/167299236-9a181455-fe70-4abb-897b-91a27abde6d9.PNG)
+![EXPT 2 6](https://user-images.githubusercontent.com/75234965/167299240-da9893b0-3173-4253-8ceb-5392366f582e.PNG)
 
 
 ## SOLUTION JUSTIFICATION:
